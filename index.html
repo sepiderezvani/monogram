@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Prompt:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Poppins;
+        }
+        .nav-link{
+            color:#efc2b3;
+            font-family: Poppins;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        .nav-item{
+            transform: scale(.9);
+        }
+        ul li{
+            list-style-type: none;
+        }
+        h3{
+            color: #1a2456;
+            margin-top: 10px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .navbar-toggler:focus:hover{
+            border: none;
+        }
+        .footer-container a{
+            text-decoration: none;
+            color: #efc2b3;
+            padding: 5px;
+        }
+        .pre-order-box{
+            background-color:#ff7952;
+            width: 120px;
+            height: 28px;
+            font-family: Poppins;
+            font-weight: 500;
+            padding: 0px 8px;
+            position: absolute;
+            right: 13px;
+            top: 33px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="position-fixed mx-auto p-4 col-lg-12 col-sm-12" style="z-index: 100;">
+        <nav class="navbar navbar-expand-lg mx-auto" style="background-color:#1a2456;left: -10px">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <svg height="38" viewBox="0 0 520 114" fill="#efc2b3"><title>Monogram</title><path d="M150,36V0H0V114H150ZM144,6V36H78V6ZM6,6H72V72H6ZM72,108H6V78H72Zm72,0H78V78h0V42h66Z"></path><rect x="35.5" y="17" width="6" height="44"></rect><rect x="53" y="17" width="6" height="44"></rect><rect x="18" y="17" width="6" height="44"></rect><path d="M111.5,50a25,25,0,1,0,25,25A25,25,0,0,0,111.5,50Zm0,44a19,19,0,1,1,19-19A19,19,0,0,1,111.5,94Z"></path><polygon points="206.809 62.675 197.497 42.37 191.584 42.37 191.586 72.048 197.523 72.048 197.523 55.206 205.264 72.048 208.374 72.048 216.112 55.206 216.112 72.048 222.042 72.048 222.042 42.37 216.116 42.37 206.809 62.675"></polygon><path d="M254.479,43.7a17.5,17.5,0,0,0-16.021,0,14.407,14.407,0,0,0-5.676,5.491,16.649,16.649,0,0,0,.006,16.083,14.247,14.247,0,0,0,5.671,5.463h0a16.777,16.777,0,0,0,7.787,1.927h.248a16.4,16.4,0,0,0,7.991-1.946,14.508,14.508,0,0,0,5.675-5.474,16.621,16.621,0,0,0-.006-16.063A14.429,14.429,0,0,0,254.479,43.7Zm.2,18.682a8.787,8.787,0,0,1-3.407,3.376,10.262,10.262,0,0,1-9.593,0,8.734,8.734,0,0,1-3.417-3.363,11.047,11.047,0,0,1-.026-10.274,8.733,8.733,0,0,1,3.407-3.394,9.8,9.8,0,0,1,4.858-1.211,9.653,9.653,0,0,1,4.81,1.209,8.786,8.786,0,0,1,3.38,3.384A11.041,11.041,0,0,1,254.678,62.38Z"></path><polygon points="289.285 61.212 276.742 42.59 276.593 42.37 270.888 42.37 270.888 72.048 277.114 72.048 277.114 53.166 289.807 72.048 295.512 72.048 295.512 42.37 289.285 42.37 289.285 61.212"></polygon><path d="M327.94,43.7a17.506,17.506,0,0,0-16.024,0,14.414,14.414,0,0,0-5.676,5.491,16.639,16.639,0,0,0,.006,16.083,14.249,14.249,0,0,0,5.672,5.463h0a16.767,16.767,0,0,0,7.786,1.927h.251a16.358,16.358,0,0,0,7.991-1.946,14.5,14.5,0,0,0,5.675-5.473,16.607,16.607,0,0,0-.006-16.064A14.435,14.435,0,0,0,327.94,43.7Zm.2,18.682a8.819,8.819,0,0,1-3.408,3.377,9.828,9.828,0,0,1-4.8,1.189,9.686,9.686,0,0,1-4.8-1.19,8.739,8.739,0,0,1-3.419-3.363,11.052,11.052,0,0,1-.024-10.274,8.715,8.715,0,0,1,3.4-3.394,10.261,10.261,0,0,1,9.668,0,8.777,8.777,0,0,1,3.379,3.384A11.047,11.047,0,0,1,328.139,62.38Z"></path><path d="M360.847,60.071H365.7V65.68a12.124,12.124,0,0,1-9.842-.3A8.491,8.491,0,0,1,352.4,62.02a10.373,10.373,0,0,1-1.257-5.21,9.7,9.7,0,0,1,1.33-5.127,8.954,8.954,0,0,1,3.6-3.382,10.926,10.926,0,0,1,5.151-1.2,18.4,18.4,0,0,1,5.167.676,10.671,10.671,0,0,1,3.971,2.157l.826.71v-6.31l-.207-.15a13.858,13.858,0,0,0-4.574-2.173,21.461,21.461,0,0,0-5.627-.681,17.6,17.6,0,0,0-8.264,1.9,13.706,13.706,0,0,0-5.647,5.445,17.611,17.611,0,0,0,.008,16.272,13.557,13.557,0,0,0,5.631,5.413l.474.233.011-.025a20.172,20.172,0,0,0,18.694-1.363l.237-.147V54.911H360.847Z"></path><path d="M430.287,41.958h-5.74L412.621,71.636h6.435l2.59-6.606h11.5l2.633,6.606h6.391L430.412,42.271Zm1.033,17.766h-7.845L427.4,49.45Z"></path><polygon points="476.574 41.958 467.268 62.263 457.955 41.958 452.043 41.958 452.031 71.636 457.969 71.636 457.969 54.794 465.709 71.636 468.82 71.636 476.56 54.794 476.56 71.636 482.501 71.636 482.501 41.958 476.574 41.958"></polygon><path d="M404.4,57.222a9.5,9.5,0,0,0,1.649-5.623,9.138,9.138,0,0,0-2.779-7.193,11.069,11.069,0,0,0-7.683-2.448H383.069V71.636h6.225v-10.5h4.883l5.554,10.5h6.483l-5.959-11.25A9.062,9.062,0,0,0,404.4,57.222Zm-4.579-5.62a3.694,3.694,0,0,1-1.351,3.125,6.154,6.154,0,0,1-3.8,1.1h-.024l-5.345,0V47.266h5.345C398.172,47.266,399.817,48.633,399.818,51.6Z"></path></svg>
+                </a>
+<!--                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="position:relative;left: 320px">-->
+<!--                    <span class="" style="">-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="45" fill="#efc2b3" class="bi bi-list" viewBox="0 0 16 16">-->
+<!--                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>-->
+<!--                       </svg>-->
+<!--                    </span>-->
+<!--                    </button>-->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop"
+                aria-controls="offcanvasWithBackdrop"
+                        style="position:relative;left: 320px"><span class="" style="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="45" fill="#efc2b3" class="bi bi-list" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                       </svg>
+                    </span></button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel" style="background-color:#1a2456;">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"><a style="position: relative;top: 15px;left: 10px" href="#">
+                            <svg height="38" viewBox="0 0 520 114" fill="#efc2b3"><title>Monogram</title><path d="M150,36V0H0V114H150ZM144,6V36H78V6ZM6,6H72V72H6ZM72,108H6V78H72Zm72,0H78V78h0V42h66Z"></path><rect x="35.5" y="17" width="6" height="44"></rect><rect x="53" y="17" width="6" height="44"></rect><rect x="18" y="17" width="6" height="44"></rect><path d="M111.5,50a25,25,0,1,0,25,25A25,25,0,0,0,111.5,50Zm0,44a19,19,0,1,1,19-19A19,19,0,0,1,111.5,94Z"></path><polygon points="206.809 62.675 197.497 42.37 191.584 42.37 191.586 72.048 197.523 72.048 197.523 55.206 205.264 72.048 208.374 72.048 216.112 55.206 216.112 72.048 222.042 72.048 222.042 42.37 216.116 42.37 206.809 62.675"></polygon><path d="M254.479,43.7a17.5,17.5,0,0,0-16.021,0,14.407,14.407,0,0,0-5.676,5.491,16.649,16.649,0,0,0,.006,16.083,14.247,14.247,0,0,0,5.671,5.463h0a16.777,16.777,0,0,0,7.787,1.927h.248a16.4,16.4,0,0,0,7.991-1.946,14.508,14.508,0,0,0,5.675-5.474,16.621,16.621,0,0,0-.006-16.063A14.429,14.429,0,0,0,254.479,43.7Zm.2,18.682a8.787,8.787,0,0,1-3.407,3.376,10.262,10.262,0,0,1-9.593,0,8.734,8.734,0,0,1-3.417-3.363,11.047,11.047,0,0,1-.026-10.274,8.733,8.733,0,0,1,3.407-3.394,9.8,9.8,0,0,1,4.858-1.211,9.653,9.653,0,0,1,4.81,1.209,8.786,8.786,0,0,1,3.38,3.384A11.041,11.041,0,0,1,254.678,62.38Z"></path><polygon points="289.285 61.212 276.742 42.59 276.593 42.37 270.888 42.37 270.888 72.048 277.114 72.048 277.114 53.166 289.807 72.048 295.512 72.048 295.512 42.37 289.285 42.37 289.285 61.212"></polygon><path d="M327.94,43.7a17.506,17.506,0,0,0-16.024,0,14.414,14.414,0,0,0-5.676,5.491,16.639,16.639,0,0,0,.006,16.083,14.249,14.249,0,0,0,5.672,5.463h0a16.767,16.767,0,0,0,7.786,1.927h.251a16.358,16.358,0,0,0,7.991-1.946,14.5,14.5,0,0,0,5.675-5.473,16.607,16.607,0,0,0-.006-16.064A14.435,14.435,0,0,0,327.94,43.7Zm.2,18.682a8.819,8.819,0,0,1-3.408,3.377,9.828,9.828,0,0,1-4.8,1.189,9.686,9.686,0,0,1-4.8-1.19,8.739,8.739,0,0,1-3.419-3.363,11.052,11.052,0,0,1-.024-10.274,8.715,8.715,0,0,1,3.4-3.394,10.261,10.261,0,0,1,9.668,0,8.777,8.777,0,0,1,3.379,3.384A11.047,11.047,0,0,1,328.139,62.38Z"></path><path d="M360.847,60.071H365.7V65.68a12.124,12.124,0,0,1-9.842-.3A8.491,8.491,0,0,1,352.4,62.02a10.373,10.373,0,0,1-1.257-5.21,9.7,9.7,0,0,1,1.33-5.127,8.954,8.954,0,0,1,3.6-3.382,10.926,10.926,0,0,1,5.151-1.2,18.4,18.4,0,0,1,5.167.676,10.671,10.671,0,0,1,3.971,2.157l.826.71v-6.31l-.207-.15a13.858,13.858,0,0,0-4.574-2.173,21.461,21.461,0,0,0-5.627-.681,17.6,17.6,0,0,0-8.264,1.9,13.706,13.706,0,0,0-5.647,5.445,17.611,17.611,0,0,0,.008,16.272,13.557,13.557,0,0,0,5.631,5.413l.474.233.011-.025a20.172,20.172,0,0,0,18.694-1.363l.237-.147V54.911H360.847Z"></path><path d="M430.287,41.958h-5.74L412.621,71.636h6.435l2.59-6.606h11.5l2.633,6.606h6.391L430.412,42.271Zm1.033,17.766h-7.845L427.4,49.45Z"></path><polygon points="476.574 41.958 467.268 62.263 457.955 41.958 452.043 41.958 452.031 71.636 457.969 71.636 457.969 54.794 465.709 71.636 468.82 71.636 476.56 54.794 476.56 71.636 482.501 71.636 482.501 41.958 476.574 41.958"></polygon><path d="M404.4,57.222a9.5,9.5,0,0,0,1.649-5.623,9.138,9.138,0,0,0-2.779-7.193,11.069,11.069,0,0,0-7.683-2.448H383.069V71.636h6.225v-10.5h4.883l5.554,10.5h6.483l-5.959-11.25A9.062,9.062,0,0,0,404.4,57.222Zm-4.579-5.62a3.694,3.694,0,0,1-1.351,3.125,6.154,6.154,0,0,1-3.8,1.1h-.024l-5.345,0V47.266h5.345C398.172,47.266,399.817,48.633,399.818,51.6Z"></path></svg>
+                        </a></h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" style="color: #efc2b3;position:relative;top:10px;right: 15px;" ></button>
+                    </div>
+                    <hr style="color: #efc2b3;font-weight: bold">
+                    <div class="offcanvas-body">
+                        <ul class="mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">HOW IT WORKS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    WORK FLOWS
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">DOWNLOAD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SUPPORT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-weight: 600" aria-current="page" href="#">SHOP</a>
+                            </li>
+                            <li class="nav-item d-sm-block d-none d-md-none " style="margin-left: 10px;margin-right: -10px;">
+                                <a class="nav-link" style="" aria-current="page" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    USD
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-none d-sm-block d-lg-none border-0" type="button" style="position:relative;left: 160px">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="#efc2b3" class="bi bi-bag" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="border-0 d-none d-sm-block d-lg-none" type="button">
+                    <a class="nav-link dropdown-toggle fs-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        USD
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link"style="" aria-current="page" href="#">HOW IT WORKS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                WORK FLOWS
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">DOWNLOAD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SUPPORT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-weight: 600" aria-current="page" href="#">SHOP</a>
+                        </li>
+                        <li class="nav-item d-sm-block d-none d-md-none " style="margin-left: 10px;margin-right: -10px;">
+                            <a class="nav-link" style="" aria-current="page" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                USD
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+        <div class="row">
+            <div class="main-image d-none d-lg-block col-lg-12" style="background:linear-gradient(to bottom , rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50))  ,url(images/shop_cta_xl_896f6b8270.png) no-repeat center center; background-size: cover;width: 100vw;height: 100vh;max-width: 100%;position:relative;">
+                <div class="text-main mx-auto" style="position:absolute;top:50%;left:55%;z-index: 200;transform: translate(-50%,-50%);color: #efc2b3">
+                    <h1 class="col-xl-8"style="text-align: center" >A CONSOLE FOR EVERY WORKFLOW</h1>
+                    <h4 class="col-xl-8 col-md-10" style=";font-weight: 300;text-align: center">Discover the perfect console for yours.</h4>
+                </div>
+            </div>
+            <div class="main-image d-none d-sm-block d-lg-none" style="background:linear-gradient(to bottom , rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50))  ,url(images/shop_cta_xl_896f6b821270.png) no-repeat center center; background-size: cover;width: 100vw;height:600px;position:relative;max-width: 100%">
+                <div class="text-main mx-auto" style="position:absolute;top:50%;left:55%;z-index: 200;transform: translate(-50%,-50%);color: #efc2b3">
+                    <h1 class="col-xl-8"style="text-align: center" >A CONSOLE FOR EVERY WORKFLOW</h1>
+                    <h4 class="col-xl-8 col-md-10" style=";font-weight: 300;text-align: center">Discover the perfect console for yours.</h4>
+                </div>
+            </div>
+        </div>
+    <div class="row col-9 mx-auto" style="margin-top: 100px">
+        <figure class="col-lg-6 col-sm-12" style="position:relative;">
+            <img src="images/Everyday-Bundle-Mocks-final_750x500_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2">
+                <h4>MINI CONSOLE</h4>
+                    <p>Ideal for everyday shortcuts Adaptable to any workflow</p>
+            </figcaption>
+        </figure>
+        <figure class="col-lg-6 col-sm-12" style="position: relative">
+            <img src="images/Packaging_TravelerClosedBracket1_Monogram_May20204517_d3899632-1a43-425f-a16a-1d5b968810c7_1920x1280_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2">
+                <h4>AUDIO CONSOLE</h4>
+                <p>Ideal for music & audio adaptable to any workflow</p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="row col-9 mx-auto">
+        <figure class="col-lg-6 col-sm-12" style="position: relative">
+            <img src="images/Packaging_StudioClosedBracket1_Monogram_May20204507_548446cb-17c9-4fc2-8b12-ae1b1a308a7e_1920x1280_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2">
+                <h4>PHOTO CONSOLE</h4>
+                <p>Ideal for photo & video Adaptable to any workflow</p>
+            </figcaption>
+        </figure>
+        <figure class="col-lg-6 col-sm-12" style="position: relative">
+            <img src="images/Packaging_MasterClosedBracket1_Monogram_May20204494_1920x1280_crop_center.jpg.jpg" class="col-12" alt="">
+            <figcaption class="mt-2">
+                <div class="pre-order-box">pre-order</div>
+                <h4>VIDEO CONSOLE</h4>
+                <p>Ideal for video & film adaptable to any workflow</p>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="row position-relative" style="position: relative">
+            <img src="images/shop-banner-module.png" class="" style="height: 500px;width: 100%" alt="">
+                <div class="text-main" style="color: #1a2456;text-align: center";>
+                    <h1 class="col-lg-6 col-sm-10" style="font-family: Poppins;font-weight: 600;position:absolute;left:50%;bottom: 70%;transform: translate(-50%,-50%);z-index: 50;letter-spacing: 5px">CREATE YOUR OWN CONSOLE</h1>
+                    <h4 style="font-family: Prompt;font-weight: 300;position:absolute;left:50%;bottom: 65%;transform: translate(-50%,-50%);z-index: 50" >Add-on to make it perfect.</h4>
+</div>
+    </div>
+    <div class="row col-10 mx-auto" style="margin-top: 100px;">
+        <figure class="col-lg-4 col-sm-12" style="position: relative">
+            <img src="images/20221018_MonogramCC_Case_06_1366x911_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3 class="col-lg-9">MONOGRAM CARRYING CASE</h3>
+                <span class="col-lg-1 mt-2">$59</span>
+            </figcaption>
+        </figure>
+        <figure class="col-lg-4 col-sm-12" style="position: relative">
+            <img src="images/Packaging_CoreBracket1_Monogram_May20204545_ccb8b10a-0772-448b-9857-a14fa83bd5b7_1920x1280_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>MONOGRAM CORE</h3>
+                <span class="col-lg-1 mt-2">$159</span>
+            </figcaption>
+        </figure>
+        <figure class="col-lg-4 col-sm-12" style="position: relative">
+            <img src="images/Packaging_SliderHeroBracket1_Monogram_May20204536_8b0e1987-0315-491e-9951-a9404031b55a_1920x1280_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>SLIDER MODULE</h3>
+                <span class="col-lg-1 mt-2">$159</span>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="row col-10 mx-auto" style="margin-top: 25px;">
+        <figure class="col-lg-4 col-sm-12" style="position:relative;">
+            <img src="images/Packaging_KeysBracket1_Monogram_May20204548_c26eef0c-c95c-40e6-8fd3-abe1f59abfcd_1920x1280_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>ESSENTIAL KEYS MODULE</h3>
+                <span class="col-lg-1 mt-2">$129</span>
+            </figcaption>
+        </figure>
+        <figure class="col-lg-4 col-sm-12" style="position:relative;">
+            <img src="images/Packaging_OrbiterBracket1_Monogram_May20204542_50105ec2-8b68-4ed5-ac4e-ac261c36459c_1920x1280_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>ORBITER MODULE</h3>
+                <span class="col-lg-1 mt-2">$159</span>
+            </figcaption>
+        </figure>
+        <figure class="col-lg-4 col-sm-12" style="position:relative;">
+            <img src="images/Packaging_DialHeroBracket1_Monogram_May20204539_375e79fb-32f0-447b-b606-3dd0ac8318f6_1920x1280_crop_center.jpg.jpg" class="col-12" alt="">
+            <div class="pre-order-box">pre-order</div>
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>DIAL MODULE</h3>
+                <span class="col-lg-1 mt-2">$129</span>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="row col-10 mx-auto" style="margin-top: 25px;">
+        <figure class="col-lg-4 col-sm-12">
+            <img src="images/SW-box-render-mini-midi-final-august_1920x1382_crop_center.png" class="col-12" alt="">
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>CONSOLE PACK : AUDIO</h3>
+                <span class="col-lg-1 mt-2">$29</span>
+            </figcaption>
+        </figure>
+        <figure class="col-lg-4 col-sm-12">
+            <img src="images/SW-box-render-mini-photo-final-august_1920x1382_crop_center.png" class="col-12" alt="">
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>CONSOLE PACK : PHOTO</h3>
+                <span class="col-lg-1 mt-2">$39</span>
+            </figcaption>
+        </figure>
+        <figure class="col-lg-4 col-sm-12">
+            <img src="images/SW-box-render-mini-video-final-august_1920x1382_crop_center.png" class="col-12" alt="">
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>CONSOLE PACK : VIDEO</h3>
+                <span class="col-lg-1 mt-2">$69</span>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="row col-10 mx-auto" style="margin-top: 25px;">
+        <figure class="col-lg-4 col-sm-12">
+            <img src="images/Care-updated-traveler_1366x904_crop_center.jpg.jpg" class="col-12" alt="">
+            <figcaption class="mt-2 col-12 justify-content-between d-flex">
+                <h3>MONOGRAM CARE</h3>
+                <span class="col-lg-3 mt-2">$19 - $129</span>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+    <div class="footer-container col-lg-12 col-sm-10 fs-3 d-none d-sm-block d-lg-none" style="background-color:#1a2456;width: 100%;margin-top: 80px; color: #efc2b3;">
+        <div class="row col-10 mx-auto d-flex justify-content-evenly">
+            <div class="monogram col-xl-2 col-lg-4 col-md-6 mt-5">
+                <p style="margin-left: 25px;">MONOGRAM</p>
+                <ul>
+                    <li>305 King St W.</li>
+                    <li>Suite 502</li>
+                    <li>Kitchener, ON</li>
+                    <li>Canada</li>
+                </ul>
+            </div>
+            <div class="subscribe-monogram col-lg-8 col-xl-4 col-md-12 order-sm-first order-xl-last order-lg-first mt-5" >
+                <p style="">SUBSCRIBE TO MONOGRAM</p>
+                <p>Master productivity with Creative Console and get all the latest Monogram news.</p>
+                <div class="input-group mb-3">
+                    <input style="background-color:#1a2456;color: #efc2b3" type="text" class="form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button style="background-color:rgba(239,194,179,0.68);color: #1a2456;margin-left: 15px;border-radius: 20px;padding: 10px 20px" class="btn btn-outline-secondary" type="button">SUBMIT</button>
+                    </div>
+                </div>
+                <div class="social-media-icon" style="margin-left: -40px;">
+                    <ul class="col-lg-2 flex-row" style="display: flex;" >
+                        <li><a href="#">
+                            <svg viewBox="0 0 448 512" width="25" height="25" fill="#1a2456" style="background-color:#efc2b3;border-radius: 50%;padding: 3px">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                            </svg>
+                        </a></li>
+                        <li><a href="#">
+                            <svg viewBox="0 0 512 512" width="25" height="25" fill="#1a2456" style="background-color:#efc2b3;border-radius: 50%;padding: 3px">
+                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                            </svg>
+                        </a></li>
+                        <li><a href="#">
+                            <svg viewBox="0 0 264 512" width="25" height="25"  fill="#1a2456" style="background-color:#efc2b3;border-radius: 50%;padding: 3px">
+                                <path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path>
+                            </svg>
+                        </a></li>
+                        <li><a href="#">
+                            <svg viewBox="0 0 576 512" width="25" height="25"  fill="#1a2456" style="background-color:#efc2b3;border-radius: 50%;padding: 3px">
+                                <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </div>
+                <p class="d-none d-lg-block">© Monogram 2023</p>
+            </div>
+            <div class="quick-links col-xl-2 col-lg-4 col-md-6 mt-5">
+                <p style="margin-left: 25px;">QUICK LINKS</p>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+            </div>
+            <div class="help col-xl-2 col-lg-4 col-md-6 mt-5">
+                <p style="margin-left: 25px;">HELP</p>
+                <ul>
+                    <li>FAQs</li>
+                    <li>Support Center</li>
+                    <li>Shipping and sales</li>
+                </ul>
+            </div>
+            <div class="information col-xl-2 col-lg-4 col-md-6 mt-5">
+                <p style="margin-left: 25px;">INFORMATION</p>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Work with us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Terms of Sale</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                </ul>
+            </div>
+            <p class="d-none d-lg-none d-md-block" style="margin: 50px;">© Monogram 2023</p>
+        </div>
+    </div>
+<div class="footer-container col-lg-12 col-sm-10 d-none d-lg-block" style="background-color:#1a2456;width: 100%;margin-top: 80px; color: #efc2b3;font-size: .9rem;">
+    <div class="row col-10 mx-auto d-flex justify-content-evenly">
+        <div class="monogram col-xl-2 col-lg-4 col-md-6 mt-5">
+            <p style="margin-left: 25px;">MONOGRAM</p>
+            <ul>
+                <li>305 King St W.</li>
+                <li>Suite 502</li>
+                <li>Kitchener, ON</li>
+                <li>Canada</li>
+            </ul>
+        </div>
+        <div class="subscribe-monogram col-lg-8 col-xl-4 col-md-12 order-sm-first order-xl-last order-lg-first mt-5" >
+            <p style="">SUBSCRIBE TO MONOGRAM</p>
+            <p>Master productivity with Creative Console and get all the latest Monogram news.</p>
+            <div class="input-group mb-3">
+                <input style="background-color:#1a2456;color: #efc2b3" type="text" class="form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button style="background-color:rgba(239,194,179,0.68);color: #1a2456;margin-left: 15px;border-radius: 20px;padding: 10px 20px" class="btn btn-outline-secondary" type="button">SUBMIT</button>
+                </div>
+            </div>
+            <div class="social-media-icon" style="margin-left: -40px;">
+                <ul class="col-lg-2 flex-row" style="display: flex;" >
+                    <li><a href="#">
+                        <svg viewBox="0 0 448 512" width="25" height="25" fill="#1a2456" style="background-color:#efc2b3;border-radius: 50%;padding: 3px">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg viewBox="0 0 512 512" width="25" height="25" fill="#1a2456" style="background-color:#efc2b3;border-radius: 50%;padding: 3px">
+                            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg viewBox="0 0 264 512" width="25" height="25"  fill="#1a2456" style="background-color:#efc2b3;border-radius: 50%;padding: 3px">
+                            <path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg viewBox="0 0 576 512" width="25" height="25"  fill="#1a2456" style="background-color:#efc2b3;border-radius: 50%;padding: 3px">
+                            <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                        </svg>
+                    </a></li>
+                </ul>
+            </div>
+            <p class="d-none d-lg-block">© Monogram 2023</p>
+        </div>
+        <div class="quick-links col-xl-2 col-lg-4 col-md-6 mt-5">
+            <p style="margin-left: 25px;">QUICK LINKS</p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">How it Works</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Download</a></li>
+            </ul>
+        </div>
+        <div class="help col-xl-2 col-lg-4 col-md-6 mt-5">
+            <p style="margin-left: 25px;">HELP</p>
+            <ul>
+                <li>FAQs</li>
+                <li>Support Center</li>
+                <li>Shipping and sales</li>
+            </ul>
+        </div>
+        <div class="information col-xl-2 col-lg-4 col-md-6 mt-5">
+            <p style="margin-left: 25px;">INFORMATION</p>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Work with us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Terms of Sale</a></li>
+                <li><a href="#">Press Kit</a></li>
+            </ul>
+        </div>
+        <p class="d-none d-lg-none d-md-block" style="margin: 50px;">© Monogram 2023</p>
+    </div>
+</div>
+</body>
+</html>
